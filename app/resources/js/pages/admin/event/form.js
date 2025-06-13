@@ -49,7 +49,7 @@ export default function AddEvent(props) {
       <Modal back={route('events')}>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title={`${action} Event`} />
+            <Header title={`Evénement ${action}`} />
             <Errors errors={errors} />
 
             <Group onSubmit={submit}>
@@ -69,7 +69,7 @@ export default function AddEvent(props) {
             </Group>
             {(add == false) && (props.event.active == false) &&
               <div className="pt-2">
-                <Link href={route('delete-event', props.event.id)} type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Delete Event</Link>
+                <Link href={route('delete-event', props.event.id)} type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Supprimer Événement</Link>
               </div>
             }
           </div>

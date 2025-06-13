@@ -37,11 +37,11 @@ export default function AddUser(props) {
 
   return (
     <>
-      <Head title={`${ action } User`} />
+      <Head title={`Utilisateur ${ action } User`} />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-          <Header title={`${ action } User`} />
+          <Header title={`Utilisateur ${ action }`} />
           <Errors errors={ errors } />
 
           <Group onSubmit={ submit }>
@@ -52,7 +52,7 @@ export default function AddUser(props) {
           </Group>
           { !add && props.data.canDelete &&
             <div className="pt-2">
-              <Link href={ route('delete-user', props.data.id) } type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Delete User</Link>
+              <Link href={ route('delete-user', props.data.id) } type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Supprimer l'utilisateur</Link>
             </div>
           }
           </div>

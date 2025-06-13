@@ -9,7 +9,7 @@ export default function List({ challenges }) {
   return (
     <Frame title="Challenges">
       <ButtonBar>
-        <Button href={ route('add-challenge') }>Add Challenge</Button>
+        <Button href={ route('add-challenge') }>Ajouter un challenge</Button>
       </ButtonBar>
       <Container>
         { challenges.map((c) => <ListItem key={ c.id }>
@@ -35,7 +35,7 @@ export default function List({ challenges }) {
         
         { (challenges.length === 0) && 
           <div className="p-5 text-center">
-            <p className="text-medium text-xl">No challenges</p>
+            <p className="text-medium text-xl">Pas de challenges</p>
           </div>
         }
       </Container>

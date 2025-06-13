@@ -38,11 +38,11 @@ export default function AddChallenge(props) {
 
   return (
     <>
-      <Head title={`${ action } Challenge`} />
+      <Head title={`Challenge ${ action }`} />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-          <Header title={`${ action } Challenge`} />
+          <Header title={`Challenge ${ action }`} />
           <Errors errors={errors} />
           
           <Group onSubmit={ submit }>
@@ -53,7 +53,7 @@ export default function AddChallenge(props) {
           </Group>
           { !add && 
             <div className="pt-2">
-              <Link href={ route('delete-challenge', props.data.id) } type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Delete Challenge</Link>
+              <Link href={ route('delete-challenge', props.data.id) } type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Supprimer Challenge</Link>
             </div>
           }
           </div>

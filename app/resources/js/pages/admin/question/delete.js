@@ -19,14 +19,14 @@ export default function DeleteQuestion({ id, name }) {
 
   return (
     <>
-      <Head title="Delete Question" />
+      <Head title="Supprimer la question" />
       <Modal back={ route('questions') }>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title="Delete Question">
+            <Header title="Supprimer la question">
               <p className="text-red-500 font-medium">
-                Are you sure you want to delete question <span className="font-bold">{ name }</span>?
-                This will also delete all submissions associated with it.
+                Êtes-vous sûr de vouloir supprimer la question <span className="font-bold">{ name }</span>?
+                Cette opération supprimera également toutes les soumissions qui y sont associées.
               </p>
             </Header>
 
@@ -38,7 +38,7 @@ export default function DeleteQuestion({ id, name }) {
                 type="submit"
                 className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md
                 font-semibold text-xs text-white uppercase tracking-widest">
-                Delete Question
+                Supprimer la question
               </button>
             </Group>
           </div>

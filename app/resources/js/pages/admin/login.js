@@ -25,7 +25,7 @@ export default function Login(props) {
 
   return (
     <>
-      <Head title="Login" />
+      <Head title="Connexion" />
       <div className="container max-w-screen-lg mx-auto">
         <Frame>
           <Header title={ props.name } />
@@ -33,7 +33,7 @@ export default function Login(props) {
           <Group onSubmit={ submit }>
             <Input type="text" title="Username" name="username" placeholder="Username" onChange={ handleChange } required />
             <Input type="password" title="Password" name="password" placeholder="Password" onChange={ handleChange } required />
-            <Button processing={ processing }>Login</Button>
+            <Button processing={ processing }>Connexion</Button>
           </Group>
         </Frame>
       </div>

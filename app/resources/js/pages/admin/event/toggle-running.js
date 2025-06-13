@@ -18,20 +18,20 @@ export default function ToggleRunningEvent({ event }) {
 
   return (
     <>
-      <Head title="Toggle Running Event" />
+      <Head title="Changer l'événement en cours" />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
 
             {(event.running == true) &&
-              <Header title="Stop Running Event">
-                <p className="font-medium mb-2">Are you sure you want to stop running <span className="font-bold">{event.name}</span>?</p>
-                <p className="text-red-500">This will end the event, any teams currently participating will be locked out.</p>
+              <Header title="Arrêter l'événement en cours">
+                <p className="font-medium mb-2">Êtes-vous sûr de vouloir arrêter l'événement <span className="font-bold">{event.name}</span> en cours ?</p>
+                <p className="text-red-500">Cela mettra fin à l'événement, et toutes les équipes qui y participent actuellement seront exclues.</p>
               </Header>
             }
             {(event.running == false) &&
-              <Header title="Start Running Event">
-                <p className="font-medium mb-2">Are you sure you want to start running <span className="font-bold">{event.name}</span>?</p>
+              <Header title="Démarrer l'événement">
+                <p className="font-medium mb-2">Êtes-vous sûr de vouloir démarrer l'événement <span className="font-bold">{event.name}</span>?</p>
               </Header>
             }
             <Errors errors={errors} />
@@ -39,10 +39,10 @@ export default function ToggleRunningEvent({ event }) {
             <Group onSubmit={toggleRunning}>
               <input type="hidden" name="id" value={event.id} />
               {(event.running == true) &&
-                <button type="submit" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Stop Running Event</button>
+                <button type="submit" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Arrêt de l'événement en cours</button>
               }
               {(event.running == false) &&
-                <button type="submit" className="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Start Running Event</button>
+                <button type="submit" className="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Démarrer l'événement</button>
               }
             </Group>
           </div>

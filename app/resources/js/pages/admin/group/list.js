@@ -7,9 +7,9 @@ import { PencilIcon } from '@heroicons/react/solid';
 
 export default function List({ groups }) {
   return (
-    <Frame title="Groups">
+    <Frame title="Groupes">
       <ButtonBar>
-        <Button href={ route('add-group') }>Add Group</Button>
+        <Button href={ route('add-group') }>Ajouter un groupe</Button>
       </ButtonBar>
       
       <Container>
@@ -31,7 +31,7 @@ export default function List({ groups }) {
         
         { (groups.length === 0) && 
           <div className="p-5 text-center">
-            <p className="text-medium text-xl">No groups</p>
+            <p className="text-medium text-xl">Pas de groupes</p>
           </div>
         }
       </Container>

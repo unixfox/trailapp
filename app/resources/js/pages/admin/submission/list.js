@@ -6,8 +6,8 @@ export default function Submissions({ submissions }) {
   return (
     <List submissions={ submissions }>
       <ButtonBar>
-        <Button href={ route('submissions') }>All</Button>
-        <Button href={ route('submissions', 'pending') }>Pending</Button>
+        <Button href={ route('submissions') }>Toutes</Button>
+        <Button href={ route('submissions', 'pending') }>En attente</Button>
       </ButtonBar>
     </List>
   )

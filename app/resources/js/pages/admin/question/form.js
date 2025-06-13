@@ -39,11 +39,11 @@ export default function AddQuestion(props) {
 
   return (
     <>
-      <Head title={`${ action } Question`} />
+      <Head title={`Question ${ action }`} />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-          <Header title={`${ action } Question`} />
+          <Header title={`Question ${ action }`} />
           <Errors errors={errors} />
 
           <Group onSubmit={ submit }>
@@ -55,7 +55,7 @@ export default function AddQuestion(props) {
           </Group>
           { !add &&
             <div className="pt-2">
-              <Link href={ route('delete-question', props.data.id) } type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Delete Question</Link>
+              <Link href={ route('delete-question', props.data.id) } type="button" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Supprimer la question</Link>
             </div>
           }
           </div>

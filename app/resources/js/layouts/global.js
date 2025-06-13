@@ -12,11 +12,19 @@ export default function Global(children) {
       Inertia.reload({ only: ['points', 'challenges', 'submission'] })
     }
   }
+
+  const translateSubmissionType = (type) => {
+    const translations = {
+      answer: "réponse",
+      challenge: "challenge",
+    };
+    return translations[type] || type;
+  };
   
   const displayMessage = (message) => {
     toast.custom((t) => (
       <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-        <p className="font-serif text-2xl font-bold text-purple-900">A message from Trail HQ!</p>
+        <p className="font-serif text-2xl font-bold text-purple-900">Message du QG!</p>
         <p className="text-lg py-4">{ message.message }</p>
         <button
           onClick={ () => toast.remove(t.id) }
@@ -37,11 +45,11 @@ export default function Global(children) {
       partialReload(submission.type);
     })
     .listen('SubmissionAccepted', (submission) => {
-      toast.success(<div>Your { submission.type } for <span className="font-bold">{ submission.name }</span> was accepted! 🥳</div>);
+      toast.success(<div>Votre { translateSubmissionType(submission.type) } pour <span className="font-bold">{ submission.name }</span> a été acceptée! 🥳</div>);
       partialReload(submission.type);
     })
     .listen('SubmissionRejected', (submission) => {
-      toast.error(<div>Your { submission.type } for <span className="font-bold">{ submission.name }</span> was rejected 😬</div>);
+      toast.error(<div>Votre { translateSubmissionType(submission.type) } pour <span className="font-bold">{ submission.name }</span> a été rejetée 😬</div>);
       partialReload(submission.type);
     }).listen('MessageToTeams', (message) => displayMessage(message));
   }

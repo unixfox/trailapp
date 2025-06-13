@@ -5,7 +5,7 @@ import { Stripe } from '@/layouts/admin/frame';
 export default function Submissions({ question, submissions }) {
   return (
     <List submissions={ submissions }>
-      <Stripe>Submissions for <span className="font-bold">{ question }</span></Stripe>
+      <Stripe>Soumissions pour <span className="font-bold">{ question }</span></Stripe>
     </List>
   )
 }

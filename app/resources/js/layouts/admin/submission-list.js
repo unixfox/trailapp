@@ -70,7 +70,7 @@ export default function List({ submissions, children }) {
         <Paginator data={ submissions } />
         { (submissions.data.length === 0) &&
           <div className="p-5 text-center">
-            <p className="text-medium text-xl">No submissions</p>
+            <p className="text-medium text-xl">Aucune soumission</p>
           </div>
         }
       </Container>

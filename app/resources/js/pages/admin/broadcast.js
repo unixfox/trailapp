@@ -21,11 +21,11 @@ export default function Broadcast(props) {
   const submit = (e) => {
     e.preventDefault();
     if(props.id === null) {
-      console.log('broadcasting to all');
+      console.log('Annonce à tout le monde');
       post(route('broadcast'));
     }
     else {
-      console.log(`broadcasting to ${ props.id }`);
+      console.log(`Annonce à ${ props.id }`);
       post(route('broadcast-to-team', props.id));
     }
   };
@@ -35,17 +35,17 @@ export default function Broadcast(props) {
 
   return (
     <>
-      <Head title="Broadcast" />
+      <Head title="Annonce" />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title={`Broadcast${ title }`}>
-              <p><span className="italic">Broadcast</span> instantly sends a message to teams - use with care, and check your message for mistakes!</p>
+            <Header title={`Annonce${ title }`}>
+              <p><span className="italic">Annonce</span> envoie instantanément un message aux équipes - utilisez-le avec précaution et vérifiez qu'il n'y a pas d'erreurs dans votre message !</p>
             </Header>
             <Errors errors={ errors } />
             <Group onSubmit={ submit }>
-              <Textarea title="Message" name="message" placeholder={`Send a message to ${ name }`} onChange={ handleChange } required />
-              <Button processing={ processing }>Broadcast</Button>
+              <Textarea title="Message" name="message" placeholder={`Envoyer un message à ${ name }`} onChange={ handleChange } required />
+              <Button processing={ processing }>Annonce</Button>
             </Group>
           </div>
         </div>

@@ -7,9 +7,9 @@ import { PencilIcon } from '@heroicons/react/solid';
 
 export default function List({ users }) {
   return (
-    <Frame title="Users">
+    <Frame title="Utilisateurs">
       <ButtonBar>
-        <Button href={ route('add-user') }>Add User</Button>
+        <Button href={ route('add-user') }>Ajouter un utilisateur</Button>
       </ButtonBar>
 
       <Container>
@@ -28,7 +28,7 @@ export default function List({ users }) {
 
         { (users.length === 0) &&
           <div className="p-5 text-center">
-            <p className="text-medium text-xl">No users - if you're seeing this you must be the root user, congratulations!</p>
+            <p className="text-medium text-xl">Aucun utilisateur - si vous voyez cela, vous devez être le seul utilisateur.</p>
           </div>
         }
       </Container>

@@ -7,7 +7,7 @@ import { CheckIcon, XIcon, PencilIcon, StarIcon } from '@heroicons/react/solid';
 
 export default function List({ events }) {
   return (
-    <Frame title="Events">
+    <Frame title="Evénements">
       <ButtonBar>
         <Button href={route('new-event')}>New Event</Button>
       </ButtonBar>
@@ -51,7 +51,7 @@ export default function List({ events }) {
 
         {(events.length === 0) &&
           <div className="p-5 text-center">
-            <p className="text-medium text-xl">No events</p>
+            <p className="text-medium text-xl">Pas d'événements</p>
           </div>
         }
       </Container>

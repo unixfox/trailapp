@@ -18,18 +18,18 @@ export default function ToggleActiveEvent({ event }) {
 
   return (
     <>
-      <Head title="Change Active Event" />
+      <Head title="Modifier l'événement actif" />
       <Modal back={route('events')}>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title="Change Active Event">
-              <p className="font-medium mb-2">Are you sure you want to make <span className="font-bold">{event.name}</span> the active event?</p>
-              <p className="text-red-500">This will end the currently running event, any teams currently participating will be locked out of the event.</p>
+            <Header title="Modifier l'événement actif">
+              <p className="font-medium mb-2">Êtes-vous sûr de vouloir d'activer l'événement <span className="font-bold">{event.name}</span> ?</p>
+              <p className="text-red-500">Cela mettra fin à l'événement en cours, et toutes les équipes participantes seront exclues de l'événement.</p>
             </Header>
             <Errors errors={errors} />
             <Group onSubmit={toggleActive}>
               <input type="hidden" name="id" value={event.id} />
-              <button type="submit" className="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Make Active Event</button>
+              <button type="submit" className="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Rendre l'événement actif</button>
             </Group>
           </div>
         </div>

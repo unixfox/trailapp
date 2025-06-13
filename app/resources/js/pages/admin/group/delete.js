@@ -19,19 +19,19 @@ export default function DeleteGroup({ id, name }) {
 
   return (
     <>
-      <Head title="Delete Group" />
+      <Head title="Supprimer le groupe" />
       <Modal back={ route('groups') }>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title="Delete Group">
-              <p className="text-red-500 font-medium">Are you sure you want to delete group <span className="font-bold">{ name }</span>? This will delete all teams (and all submissions) associated with it.</p>
+            <Header title="Supprimer le groupe">
+              <p className="text-red-500 font-medium">Êtes-vous sûr de vouloir supprimer le groupe <span className="font-bold">{ name }</span>? Cela supprimera toutes les équipes (et toutes les soumissions) qui y sont associées.</p>
             </Header>
             
             <Errors errors={errors} />
             
             <Group onSubmit={ deleteGroup }>
               <input type="hidden" name="id" value={ id } />
-              <button type="submit" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Delete Group</button>
+              <button type="submit" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Supprimer le groupe</button>
             </Group>
           </div>
         </div>

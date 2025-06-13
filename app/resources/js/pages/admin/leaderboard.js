@@ -9,9 +9,9 @@ const setFilter = (e) => {
 
 export default function TeamList({ groups, teams, filter }) {
   return (
-    <List title="Leaderboard" teams={ teams } simple>
+    <List title="Podium" teams={ teams } simple>
     <div className="flex w-full items-center">
-      <div className="grow text-right mr-2">Filter by group</div>
+      <div className="grow text-right mr-2">Filtrer par groupe</div>
       <div className="flex-none">
         <form>
           <select
@@ -19,7 +19,7 @@ export default function TeamList({ groups, teams, filter }) {
           className="border-slate-300 focus:border-purple-300 focus:ring focus:ring-purple-200 focus:ring-opacity-50 rounded-md shadow-sm text-black"
           onChange={ setFilter }
           >
-          <option key="all" value="" selected={( filter === false )}>Show all groups</option>
+          <option key="all" value="" selected={( filter === false )}>Afficher tous les groupes</option>
           { groups.map(g => (<option key={ g.id } value={ g.id } selected={( g.id == filter )}>{ g.name }</option>)) }
           </select>
         </form>

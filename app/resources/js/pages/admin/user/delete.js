@@ -19,19 +19,19 @@ export default function DeleteUser({ id, username, canDelete }) {
 
   return (
     <>
-      <Head title="Delete User" />
+      <Head title="Supprimer l'utilisateur" />
       <Modal back={ route('users') }>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title="Delete User">
+            <Header title="Supprimer l'utilisateur">
             { canDelete &&
               <p className="text-red-500 font-medium">
-                Are you sure you want to delete user <span className="font-bold">{ username }</span>?
+                Êtes-vous sûr de vouloir supprimer l'utilisateur <span className="font-bold">{ username }</span>?
               </p>
             }
             { !canDelete && 
               <p className="text-red-500 font-medium">
-                You cannot delete yourself!
+                Vous ne pouvez pas vous supprimer vous-même !
               </p>
             }
             </Header>
@@ -45,7 +45,7 @@ export default function DeleteUser({ id, username, canDelete }) {
                 type="submit"
                 className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md
                 font-semibold text-xs text-white uppercase tracking-widest">
-                Delete User
+                Supprimer l'utilisateur
               </button>
             </Group>
             }

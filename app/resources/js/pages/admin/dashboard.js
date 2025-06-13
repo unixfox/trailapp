@@ -5,7 +5,7 @@ import { Grid, GridItem } from '@/components/grid';
 
 export default function Dashboard(props) {
   return (
-    <Frame title="Dashboard" back="false">
+    <Frame title="Tableau de bord" back="false">
       <Stripe>
         <div className="flex items-center">
           <div className="flex-grow pr-5 font-bold">{props.event.name}</div>
@@ -13,12 +13,12 @@ export default function Dashboard(props) {
             <Link href={route('toggle-event-running', props.event.id)}>
               {(props.event.running == true) &&
                 <div className="mr-1 inline-flex items-center px-2 py-2 bg-green-600 border border-transparent rounded-xl font-semibold text-xs text-white uppercase tracking-widest">
-                  Running
+                  En cours
                 </div>
               }
               {(props.event.running == false) &&
                 <div className="mr-1 inline-flex items-center px-2 py-2 bg-red-600 border border-transparent rounded-xl font-semibold text-xs text-white uppercase tracking-widest">
-                  Not Running
+                  Arrêt
                 </div>
               }
             </Link>

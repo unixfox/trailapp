@@ -36,7 +36,7 @@ export default function List({ questions }) {
 
         { (questions.length === 0) &&
           <div className="p-5 text-center">
-            <p className="text-medium text-xl">No questions</p>
+            <p className="text-medium text-xl">Pas de questions</p>
           </div>
         }
       </Container>

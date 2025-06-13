@@ -19,19 +19,19 @@ export default function DeleteChallenge({ id, name }) {
 
   return (
     <>
-      <Head title="Delete Challenge" />
+      <Head title="Supprimer le challenge" />
       <Modal back={ route('challenges') }>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title="Delete Challenge">
-              <p className="text-red-500 font-medium">Are you sure you want to delete challenge <span className="font-bold">{ name }</span>? This will also delete all submissions associated with it.</p>
+            <Header title="Supprimer le challenge">
+              <p className="text-red-500 font-medium">Êtes-vous sûr de vouloir supprimer le défi <span className="font-bold">{ name }</span>? Cela supprimera également toutes les soumissions qui y sont associées.</p>
             </Header>
             
             <Errors errors={errors} />
             
             <Group onSubmit={ deleteChallenge }>
               <input type="hidden" name="id" value={ id } />
-              <button type="submit" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Delete Challenge</button>
+              <button type="submit" className="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest">Supprimer Challenge</button>
             </Group>
           </div>
         </div>
