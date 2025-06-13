@@ -28,16 +28,16 @@ export default function Dashboard(props) {
 
       <Container>
         <Grid>
-          <GridItem className="bg-blue-600" href={route('broadcast')}>Broadcast</GridItem>
-          <GridItem className="bg-teal-600" href={route('submissions')}>Submissions</GridItem>
-          <GridItem className="bg-sky-600" href={route('leaderboard')}>Leaderboard</GridItem>
-          <GridItem className="bg-emerald-600" href={route('teams')}>Teams</GridItem>
+          <GridItem className="bg-blue-600" href={route('broadcast')}>Annonce</GridItem>
+          <GridItem className="bg-teal-600" href={route('submissions')}>Soumissions</GridItem>
+          <GridItem className="bg-sky-600" href={route('leaderboard')}>Podium</GridItem>
+          <GridItem className="bg-emerald-600" href={route('teams')}>Équipes</GridItem>
           <GridItem className="bg-green-600" href={route('questions')}>Questions</GridItem>
           <GridItem className="bg-orange-600" href={route('challenges')}>Challenges</GridItem>
-          <GridItem className="bg-red-600" href={route('groups')}>Groups</GridItem>
-          <GridItem className="bg-fuchsia-600" href={route('events')}>Events</GridItem>
-          <GridItem className="bg-pink-600" href={route('users')}>Users</GridItem>
-          <GridItem className="bg-zinc-600" href={route('logout')}>Logout</GridItem>
+          <GridItem className="bg-red-600" href={route('groups')}>Groupes</GridItem>
+          <GridItem className="bg-fuchsia-600" href={route('events')}>Evénements</GridItem>
+          <GridItem className="bg-pink-600" href={route('users')}>Utilisateurs</GridItem>
+          <GridItem className="bg-zinc-600" href={route('logout')}>Déconnexion</GridItem>
         </Grid>
       </Container>
     </Frame>
