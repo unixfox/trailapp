@@ -11,7 +11,7 @@ import Button from '@/components/form/button';
 export default function AddUser(props) {
 
   const add = (props.data.username === null);
-  const action = add ? 'Add' : 'Edit';
+  const action = add ? 'Ajouter' : 'Editer';
 
   const { data, setData, post, processing, errors, reset } = useForm({
     id: props.data.id || '',
@@ -37,18 +37,18 @@ export default function AddUser(props) {
 
   return (
     <>
-      <Head title={`Utilisateur ${ action } User`} />
+      <Head title={`${ action } l'utilisateur`} />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-          <Header title={`Utilisateur ${ action }`} />
+          <Header title={`${ action } l'utilisateur`} />
           <Errors errors={ errors } />
 
           <Group onSubmit={ submit }>
-            <Input type="text" title="Username" name="username" placeholder="Username" value={ data.username } onChange={ handleChange } required />
-            <Input type="password" title="Password" name="password" placeholder="Password" onChange={ handleChange } required />
-            <Input type="password" title="Confirm Password" name="password_confirmation" placeholder="Confirm Password" onChange={ handleChange } required />
-            <Button processing={ processing }>{`${ action } User`}</Button>
+            <Input type="text" title="Utilisateur" name="username" placeholder="Nom d'utilisateur" value={ data.username } onChange={ handleChange } required />
+            <Input type="password" title="Mot de passe" name="password" placeholder="Mot de passe" onChange={ handleChange } required />
+            <Input type="password" title="Confirmer le mot de passe" name="password_confirmation" placeholder="Confirmer le mot de passe" onChange={ handleChange } required />
+            <Button processing={ processing }>{`${ action } l'utilisateur`}</Button>
           </Group>
           { !add && props.data.canDelete &&
             <div className="pt-2">

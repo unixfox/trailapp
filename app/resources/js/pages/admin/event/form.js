@@ -13,7 +13,7 @@ import Checkbox from '@/components/form/checkbox';
 export default function AddEvent(props) {
 
   const add = (props.event === false);
-  const action = add ? 'Add' : 'Edit';
+  const action = add ? 'Ajouter' : 'Editer';
 
   const { data, setData, post, processing, errors, reset } = useForm({
     id: props.event.id || '',
@@ -45,27 +45,27 @@ export default function AddEvent(props) {
 
   return (
     <>
-      <Head title={`${action} Event`} />
+      <Head title={`${action} l'événement`} />
       <Modal back={route('events')}>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-            <Header title={`Evénement ${action}`} />
+            <Header title={`${action} l'événement`} />
             <Errors errors={errors} />
 
             <Group onSubmit={submit}>
-              <Input type="text" title="Event Name" name="name" placeholder="Name" value={data.name} onChange={handleChange} required />
+              <Input type="text" title="Nom de l'événement" name="name" placeholder="Name" value={data.name} onChange={handleChange} required />
               {(add == true) &&
                 <>
-                  <Checkbox name="clone" label="Clone an existing event?" onChange={handleCheckbox} defaultChecked={data.clone} />
-                  <Select title="Event to clone" name="clone_event_id" placeholder="Choose an event" onChange={handleChange}>
+                  <Checkbox name="clone" label="Copier un événement existant ?" onChange={handleCheckbox} defaultChecked={data.clone} />
+                  <Select title="Événement à Copier" name="clone_event_id" placeholder="Choisir un événement" onChange={handleChange}>
                     {props.events.map(e => (<option key={e.id} value={e.id}>{e.name}</option>))}
                   </Select>
-                  <Checkbox name="clone_questions" label="Clone questions" onChange={handleCheckbox} defaultChecked={data.clone_questions} />
-                  <Checkbox name="clone_challenges" label="Clone challenges" onChange={handleCheckbox} defaultChecked={data.clone_challenges} />
-                  <Checkbox name="clone_groups" label="Clone groups" onChange={handleCheckbox} defaultChecked={data.clone_groups} />
+                  <Checkbox name="clone_questions" label="Copier les questions" onChange={handleCheckbox} defaultChecked={data.clone_questions} />
+                  <Checkbox name="clone_challenges" label="Copier les challenges" onChange={handleCheckbox} defaultChecked={data.clone_challenges} />
+                  <Checkbox name="clone_groups" label="Copier les groupes" onChange={handleCheckbox} defaultChecked={data.clone_groups} />
                 </>
               }
-              <Button processing={processing}>{`${action} Event`}</Button>
+              <Button processing={processing}>{`${action} l'événement`}</Button>
             </Group>
             {(add == false) && (props.event.active == false) &&
               <div className="pt-2">

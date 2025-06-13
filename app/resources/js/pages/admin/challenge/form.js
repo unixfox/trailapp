@@ -12,7 +12,7 @@ import Button from '@/components/form/button';
 export default function AddChallenge(props) {
 
   const add = (props.data.name === null);
-  const action = add ? 'Add' : 'Edit';
+  const action = add ? 'Ajouter' : 'Editer';
 
   const { data, setData, post, processing, errors, reset } = useForm({
     id: props.data.id || '',
@@ -38,18 +38,18 @@ export default function AddChallenge(props) {
 
   return (
     <>
-      <Head title={`Challenge ${ action }`} />
+      <Head title={`${ action } le challenge`} />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-          <Header title={`Challenge ${ action }`} />
+          <Header title={`${ action } le challenge`} />
           <Errors errors={errors} />
           
           <Group onSubmit={ submit }>
-            <Input type="text" title="Challenge Name" name="name" placeholder="Name" value={ data.name } onChange={ handleChange } required />
-            <Textarea title="Description" name="description" placeholder="Describe the challenge" value={ data.description } onChange={ handleChange } required />
+            <Input type="text" title="Nom du challenge" name="name" placeholder="Name" value={ data.name } onChange={ handleChange } required />
+            <Textarea title="Description" name="description" placeholder="Décrire le challenge" value={ data.description } onChange={ handleChange } required />
             <Input type="number" title="Points" name="points" placeholder="1" value={ data.points } onChange={ handleChange } required />
-            <Button processing={ processing }>{`${ action } Challenge`}</Button>
+            <Button processing={ processing }>{`${ action } le challenge`}</Button>
           </Group>
           { !add && 
             <div className="pt-2">

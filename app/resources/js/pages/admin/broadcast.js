@@ -30,8 +30,8 @@ export default function Broadcast(props) {
     }
   };
   
-  const name = (props.name !== null) ? props.name : 'all teams';
-  const title = (props.name !== null) ? ` to ${ props.name }` : '';
+  const name = (props.name !== null) ? props.name : 'toutes les équipes';
+  const title = (props.name !== null) ? ` à ${ props.name }` : '';
 
   return (
     <>
@@ -40,12 +40,12 @@ export default function Broadcast(props) {
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
             <Header title={`Annonce${ title }`}>
-              <p><span className="italic">Annonce</span> envoie instantanément un message aux équipes - utilisez-le avec précaution et vérifiez qu'il n'y a pas d'erreurs dans votre message !</p>
+              <p>Envoie un message - utilisez-le avec précaution et vérifiez qu'il n'y a pas d'erreurs dans votre message !</p>
             </Header>
             <Errors errors={ errors } />
             <Group onSubmit={ submit }>
-              <Textarea title="Message" name="message" placeholder={`Envoyer un message à ${ name }`} onChange={ handleChange } required />
-              <Button processing={ processing }>Annonce</Button>
+              <Textarea title="Message" name="message" placeholder={`Envoyer un message à l'équipe ${ name }`} onChange={ handleChange } required />
+              <Button processing={ processing }>Envoyer l'annonce</Button>
             </Group>
           </div>
         </div>
