@@ -13,7 +13,7 @@ export default function Question({ team, src }) {
       <Modal>
         <div className="px-10 py-20 text-white text-xl">
           <div className="pb-5 font-serif text-4xl font-bold">Join a team</div>
-          <p>Join <span className="font-bold">{ team }</span> by scanning the QR code below with your phone.</p>
+          <p>Rejoindre <span className="font-bold">{ team }</span> en scannant le code QR ci-dessous avec votre téléphone.</p>
           <div className="pt-10">
             <img className="bg-white rounded-xl shadow-lg mx-auto" src={ src } />
           </div>

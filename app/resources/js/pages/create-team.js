@@ -31,24 +31,24 @@ const Start = (props) => {
         {(props.running == true) &&
           <>
             <Header title={props.name}>
-              <p>Pick your group and decide on a team name to start the trail</p>
+              <p>Choisissez votre groupe et décidez d'un nom d'équipe pour commencer l'événement.</p>
             </Header>
 
             <Errors errors={errors} />
 
             <Group onSubmit={submit}>
-              <Select title="Group" name="group" placeholder="Select your group" onChange={handleChange} required>
+              <Select title="Groupe" name="group" placeholder="Sélectionnez votre groupe" onChange={handleChange} required>
                 {props.groups.map(g => (<option key={g.id} value={g.id}>{g.name}</option>))}
               </Select>
-              <Input type="text" title="Team Name" name="name" placeholder="Pick a team name" onChange={handleChange} required />
-              <Button processing={processing}>Start Trail</Button>
+              <Input type="text" title="Nom de l'équipe" name="name" placeholder="Entrer votre nom d'équipe" onChange={handleChange} required />
+              <Button processing={processing}>Rejoindre l'événément</Button>
             </Group>
           </>
         }
 
         {(props.running == false) &&
           <Header title={props.name}>
-            <p>This event isn't currently running, come back later!</p>
+            <p>Cet événement n'est pas en cours, revenez plus tard !</p>
           </Header>
         }
       </Frame>
