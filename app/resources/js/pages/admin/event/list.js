@@ -23,12 +23,12 @@ export default function List({ events }) {
                 <>
                   {(e.running == true) &&
                     <div className="mr-1 inline-flex items-center px-2 py-2 bg-green-600 border border-transparent rounded-xl font-semibold text-xs text-white uppercase tracking-widest">
-                      Running
+                      En cours
                     </div>
                   }
                   {(e.running == false) &&
                     <div className="mr-1 inline-flex items-center px-2 py-2 bg-red-600 border border-transparent rounded-xl font-semibold text-xs text-white uppercase tracking-widest">
-                      Not Running
+                      Pas en cours
                     </div>
                   }
                 </>

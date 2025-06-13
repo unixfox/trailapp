@@ -18,7 +18,7 @@ export default function Dashboard(props) {
               }
               {(props.event.running == false) &&
                 <div className="mr-1 inline-flex items-center px-2 py-2 bg-red-600 border border-transparent rounded-xl font-semibold text-xs text-white uppercase tracking-widest">
-                  Arrêt
+                  Pas en cours
                 </div>
               }
             </Link>

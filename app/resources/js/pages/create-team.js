@@ -26,7 +26,7 @@ const Start = (props) => {
 
   return (
     <>
-      <Head title="Create a team" />
+      <Head title="Créer une équipe" />
       <Frame>
         {(props.running == true) &&
           <>

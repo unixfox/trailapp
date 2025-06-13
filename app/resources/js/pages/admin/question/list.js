@@ -9,7 +9,7 @@ export default function List({ questions }) {
   return (
     <Frame title="Questions">
       <ButtonBar>
-        <Button href={ route('add-question') }>Add Question</Button>
+        <Button href={ route('add-question') }>Ajouter une question</Button>
       </ButtonBar>
 
       <Container>
