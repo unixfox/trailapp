@@ -39,11 +39,11 @@ export default function AddQuestion(props) {
 
   return (
     <>
-      <Head title={`${ action } la question`} />
+      <Head title={`${ action } une question`} />
       <Modal>
         <div className="p-10 pt-20">
           <div className="p-5 bg-white rounded-xl shadow-lg w-full">
-          <Header title={`${ action } la question`} />
+          <Header title={`${ action } une question`} />
           <Errors errors={errors} />
 
           <Group onSubmit={ submit }>

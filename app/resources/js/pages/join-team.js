@@ -9,10 +9,10 @@ export default function Question({ team, src }) {
 
   return (
     <>
-      <Head title="Join Team" />
+      <Head title="Rejoindre une équipe" />
       <Modal>
         <div className="px-10 py-20 text-white text-xl">
-          <div className="pb-5 font-serif text-4xl font-bold">Join a team</div>
+          <div className="pb-5 font-serif text-4xl font-bold">Rejoindre une équipe</div>
           <p>Rejoindre <span className="font-bold">{ team }</span> en scannant le code QR ci-dessous avec votre téléphone.</p>
           <div className="pt-10">
             <img className="bg-white rounded-xl shadow-lg mx-auto" src={ src } />
