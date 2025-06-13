@@ -31,8 +31,8 @@ export default function Login(props) {
           <Header title={ props.name } />
           <Errors errors={errors} />
           <Group onSubmit={ submit }>
-            <Input type="text" title="Username" name="username" placeholder="Username" onChange={ handleChange } required />
-            <Input type="password" title="Password" name="password" placeholder="Password" onChange={ handleChange } required />
+            <Input type="text" title="Nom d'utilisateur" name="username" placeholder="Nom d'utilisateur" onChange={ handleChange } required />
+            <Input type="password" title="Mot de passe" name="password" placeholder="Mot de passe" onChange={ handleChange } required />
             <Button processing={ processing }>Connexion</Button>
           </Group>
         </Frame>

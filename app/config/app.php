@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Trail App'),
+    'name' => env('APP_NAME', 'Juline et Camille Pacs'),
 
     /*
     |--------------------------------------------------------------------------
